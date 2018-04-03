@@ -94,24 +94,25 @@ namespace E4Lisa.Controlleur.Catalogues.pages
 
         public void Modifier()
         {
-/*
-            try
-            {
+
+          try
+           {
+                PAGE caten = (PAGE)dataGridElements.SelectedItem;
 
                 if (dataGridElements.SelectedItems.Count == 1)
                 {
-                    PAGE caten = (PAGE)dataGridElements.SelectedItem;
+                    
 
-                    Windows.Acces.ModifierAcces acces = new Windows.Acces.ModifierAcces(caten);
+                    Windows.Catalogues.page.ModifierPage MP = new Windows.Catalogues.page.ModifierPage(caten);
 
-                    acces.ShowDialog();
+                    MP.ShowDialog();
 
                 }
                 else
                 {
                     MessageBox.Show("Merci de sélectionner un et un élément maximum");
                 }
-                
+                DATA(caten.CAT_Id);
             }
             catch (Exception e)
             {
@@ -119,12 +120,12 @@ namespace E4Lisa.Controlleur.Catalogues.pages
                 throw e;
             }
 
-    */
+    
         }
 
         private void ModifierPages_Click(object sender, RoutedEventArgs e)
         {
-
+            Modifier();
         }
 
         private void Suprimer_Click(object sender, RoutedEventArgs e)

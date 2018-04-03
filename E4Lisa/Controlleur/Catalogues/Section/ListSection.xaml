@@ -47,7 +47,7 @@
                 </Grid.RowDefinitions>
                
                 <Button x:Name="Creer" Content="Creer" Click="Creer_Click" Grid.Row="1"></Button>
-                <Button x:Name="Modifier" Content="Modifier"   Grid.Row="3"></Button>
+                <Button x:Name="Modifier" Content="Modifier"  Click="Modifier_Click" Grid.Row="3"></Button>
                 <Button x:Name="Suprimer" Content="Supprimer" Click="Suprimer_Click" Grid.Row="5"></Button>
             </Grid>
         </Grid>

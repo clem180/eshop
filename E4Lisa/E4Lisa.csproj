@@ -109,8 +109,14 @@
     <Compile Include="Windows\Catalogues\page\CreerPage.xaml.cs">
       <DependentUpon>CreerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Catalogues\page\ModifierPage.xaml.cs">
+      <DependentUpon>ModifierPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Catalogues\Produit\CreerUnProduit.xaml.cs">
       <DependentUpon>CreerUnProduit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Catalogues\Produit\ModifierProduit.xaml.cs">
+      <DependentUpon>ModifierProduit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Catalogues\Section\CreerUneSection.xaml.cs">
       <DependentUpon>CreerUneSection.xaml</DependentUpon>
@@ -241,7 +247,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Catalogues\page\ModifierPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Catalogues\Produit\CreerUnProduit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Catalogues\Produit\ModifierProduit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

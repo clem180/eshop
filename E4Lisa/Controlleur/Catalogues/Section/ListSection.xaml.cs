@@ -90,5 +90,33 @@ namespace E4Lisa.Controlleur.Catalogues.Section
                 MessageBox.Show("Merci de sélectionner un et un élément maximum");
             }
         }
+
+        private void Modifier_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                PRODUIT PR = (PRODUIT)dataGridElements.SelectedItem;
+
+                if (dataGridElements.SelectedItems.Count == 1)
+                {
+
+
+                    Windows.Catalogues.Produit.ModifierProduit MP = new Windows.Catalogues.Produit.ModifierProduit(PR);
+
+                    MP.ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Merci de sélectionner un et un élément maximum");
+                }
+                DATA(Int32.Parse(recupvaleur.Text.ToString()));
+            }
+            catch (Exception a)
+            {
+
+                throw a;
+            }
+        }
     }
 }
