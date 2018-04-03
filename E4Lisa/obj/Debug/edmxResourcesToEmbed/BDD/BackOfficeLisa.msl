@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LISA_DIGITALModelStoreContainer" CdmEntityContainer="LISA_DIGITALEntities">
+    <EntitySetMapping Name="ATTRIBUT">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.ATTRIBUT">
+        <MappingFragment StoreEntitySet="ATTRIBUT">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATALOGUE">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.CATALOGUE">
+        <MappingFragment StoreEntitySet="CATALOGUE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="CatalogWidth" ColumnName="CatalogWidth" />
+          <ScalarProperty Name="CatalogHeight" ColumnName="CatalogHeight" />
+          <ScalarProperty Name="OPE_Id" ColumnName="OPE_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATALOGUE_ENTITE">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.CATALOGUE_ENTITE">
+        <MappingFragment StoreEntitySet="CATALOGUE_ENTITE">
+          <ScalarProperty Name="CAT_Id" ColumnName="CAT_Id" />
+          <ScalarProperty Name="ENT_Id" ColumnName="ENT_Id" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="DisplayStartDate" ColumnName="DisplayStartDate" />
+          <ScalarProperty Name="DisplayEndDate" ColumnName="DisplayEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORIE">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.CATEGORIE">
+        <MappingFragment StoreEntitySet="CATEGORIE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTITE">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.ENTITE">
+        <MappingFragment StoreEntitySet="ENTITE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Road" ColumnName="Road" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTREPRISE">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.ENTREPRISE">
+        <MappingFragment StoreEntitySet="ENTREPRISE">
+          <ScalarProperty Name="ENT_Id" ColumnName="ENT_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAGASIN">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.MAGASIN">
+        <MappingFragment StoreEntitySet="MAGASIN">
+          <ScalarProperty Name="ENT_Id" ColumnName="ENT_Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPERATION">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.OPERATION">
+        <MappingFragment StoreEntitySet="OPERATION">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Titre" ColumnName="Titre" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAGE">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.PAGE">
+        <MappingFragment StoreEntitySet="PAGE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="CAT_Id" ColumnName="CAT_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUIT">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.PRODUIT">
+        <MappingFragment StoreEntitySet="PRODUIT">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CAT_Id" ColumnName="CAT_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUIT_ATTRIBUT">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.PRODUIT_ATTRIBUT">
+        <MappingFragment StoreEntitySet="PRODUIT_ATTRIBUT">
+          <ScalarProperty Name="PRO_Id" ColumnName="PRO_Id" />
+          <ScalarProperty Name="ATT_Id" ColumnName="ATT_Id" />
+          <ScalarProperty Name="Valeur" ColumnName="Valeur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UTILISATEUR">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.UTILISATEUR">
+        <MappingFragment StoreEntitySet="UTILISATEUR">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Road" ColumnName="Road" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="IsTechnician" ColumnName="IsTechnician" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZONE">
+      <EntityTypeMapping TypeName="LISA_DIGITALModel.ZONE">
+        <MappingFragment StoreEntitySet="ZONE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CooX" ColumnName="CooX" />
+          <ScalarProperty Name="CooY" ColumnName="CooY" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="PRO_Id" ColumnName="PRO_Id" />
+          <ScalarProperty Name="PAG_Id" ColumnName="PAG_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

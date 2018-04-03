@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LISA_DIGITALModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ATTRIBUT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Label" Type="nvarchar" MaxLength="4000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATALOGUE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Label" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Speed" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CatalogWidth" Type="bigint" Nullable="false" />
+    <Property Name="CatalogHeight" Type="bigint" Nullable="false" />
+    <Property Name="OPE_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATALOGUE_ENTITE">
+    <Key>
+      <PropertyRef Name="CAT_Id" />
+      <PropertyRef Name="ENT_Id" />
+    </Key>
+    <Property Name="CAT_Id" Type="bigint" Nullable="false" />
+    <Property Name="ENT_Id" Type="bigint" Nullable="false" />
+    <Property Name="StartDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DisplayStartDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DisplayEndDate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATEGORIE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="bigint" Nullable="false" />
+    <Property Name="Label" Type="nvarchar" MaxLength="4000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ENTITE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Road" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CP" Type="bigint" Nullable="false" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Identifier" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ENTREPRISE">
+    <Key>
+      <PropertyRef Name="ENT_Id" />
+    </Key>
+    <Property Name="ENT_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAGASIN">
+    <Key>
+      <PropertyRef Name="ENT_Id" />
+    </Key>
+    <Property Name="ENT_Id" Type="bigint" Nullable="false" />
+    <Property Name="Code" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OPERATION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Titre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="EndDate" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PAGE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="bigint" Nullable="false" />
+    <Property Name="CAT_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUIT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Label" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Price" Type="bigint" Nullable="false" />
+    <Property Name="CAT_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUIT_ATTRIBUT">
+    <Key>
+      <PropertyRef Name="PRO_Id" />
+      <PropertyRef Name="ATT_Id" />
+    </Key>
+    <Property Name="PRO_Id" Type="bigint" Nullable="false" />
+    <Property Name="ATT_Id" Type="bigint" Nullable="false" />
+    <Property Name="Valeur" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UTILISATEUR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Identifier" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Road" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CP" Type="bigint" Nullable="false" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsTechnician" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZONE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CooX" Type="bigint" Nullable="false" />
+    <Property Name="CooY" Type="bigint" Nullable="false" />
+    <Property Name="Width" Type="bigint" Nullable="false" />
+    <Property Name="Height" Type="bigint" Nullable="false" />
+    <Property Name="PRO_Id" Type="bigint" Nullable="false" />
+    <Property Name="PAG_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CATALOGUE_ENTITE_CATALOGUE">
+    <End Role="CATALOGUE" Type="Self.CATALOGUE" Multiplicity="1" />
+    <End Role="CATALOGUE_ENTITE" Type="Self.CATALOGUE_ENTITE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOGUE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CATALOGUE_ENTITE">
+        <PropertyRef Name="CAT_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATALOGUE_ENTITE_ENTITE">
+    <End Role="ENTITE" Type="Self.ENTITE" Multiplicity="1" />
+    <End Role="CATALOGUE_ENTITE" Type="Self.CATALOGUE_ENTITE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENTITE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CATALOGUE_ENTITE">
+        <PropertyRef Name="ENT_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATALOGUE_OPERATION">
+    <End Role="OPERATION" Type="Self.OPERATION" Multiplicity="1" />
+    <End Role="CATALOGUE" Type="Self.CATALOGUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OPERATION">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CATALOGUE">
+        <PropertyRef Name="OPE_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ENTREPRISE_ENTITE">
+    <End Role="ENTITE" Type="Self.ENTITE" Multiplicity="1" />
+    <End Role="ENTREPRISE" Type="Self.ENTREPRISE" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ENTITE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ENTREPRISE">
+        <PropertyRef Name="ENT_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAGASIN_ENTITE">
+    <End Role="ENTITE" Type="Self.ENTITE" Multiplicity="1" />
+    <End Role="MAGASIN" Type="Self.MAGASIN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ENTITE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MAGASIN">
+        <PropertyRef Name="ENT_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PAGE_CATALOGUE">
+    <End Role="CATALOGUE" Type="Self.CATALOGUE" Multiplicity="1" />
+    <End Role="PAGE" Type="Self.PAGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOGUE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PAGE">
+        <PropertyRef Name="CAT_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUIT_ATTRIBUT_ATTRIBUT">
+    <End Role="ATTRIBUT" Type="Self.ATTRIBUT" Multiplicity="1" />
+    <End Role="PRODUIT_ATTRIBUT" Type="Self.PRODUIT_ATTRIBUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ATTRIBUT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PRODUIT_ATTRIBUT">
+        <PropertyRef Name="ATT_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUIT_ATTRIBUT_PRODUIT">
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="1" />
+    <End Role="PRODUIT_ATTRIBUT" Type="Self.PRODUIT_ATTRIBUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUIT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PRODUIT_ATTRIBUT">
+        <PropertyRef Name="PRO_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUIT_CATALOGUE">
+    <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1" />
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PRODUIT">
+        <PropertyRef Name="CAT_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZONE_PAGE">
+    <End Role="PAGE" Type="Self.PAGE" Multiplicity="1" />
+    <End Role="ZONE" Type="Self.ZONE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAGE">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ZONE">
+        <PropertyRef Name="PAG_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ZONE_PRODUIT">
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="1" />
+    <End Role="ZONE" Type="Self.ZONE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUIT">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ZONE">
+        <PropertyRef Name="PRO_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LISA_DIGITALModelStoreContainer">
+    <EntitySet Name="ATTRIBUT" EntityType="Self.ATTRIBUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATALOGUE" EntityType="Self.CATALOGUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATALOGUE_ENTITE" EntityType="Self.CATALOGUE_ENTITE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORIE" EntityType="Self.CATEGORIE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENTITE" EntityType="Self.ENTITE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENTREPRISE" EntityType="Self.ENTREPRISE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAGASIN" EntityType="Self.MAGASIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OPERATION" EntityType="Self.OPERATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAGE" EntityType="Self.PAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUIT_ATTRIBUT" EntityType="Self.PRODUIT_ATTRIBUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZONE" EntityType="Self.ZONE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CATALOGUE_ENTITE_CATALOGUE" Association="Self.FK_CATALOGUE_ENTITE_CATALOGUE">
+      <End Role="CATALOGUE" EntitySet="CATALOGUE" />
+      <End Role="CATALOGUE_ENTITE" EntitySet="CATALOGUE_ENTITE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATALOGUE_ENTITE_ENTITE" Association="Self.FK_CATALOGUE_ENTITE_ENTITE">
+      <End Role="ENTITE" EntitySet="ENTITE" />
+      <End Role="CATALOGUE_ENTITE" EntitySet="CATALOGUE_ENTITE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATALOGUE_OPERATION" Association="Self.FK_CATALOGUE_OPERATION">
+      <End Role="OPERATION" EntitySet="OPERATION" />
+      <End Role="CATALOGUE" EntitySet="CATALOGUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ENTREPRISE_ENTITE" Association="Self.FK_ENTREPRISE_ENTITE">
+      <End Role="ENTITE" EntitySet="ENTITE" />
+      <End Role="ENTREPRISE" EntitySet="ENTREPRISE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAGASIN_ENTITE" Association="Self.FK_MAGASIN_ENTITE">
+      <End Role="ENTITE" EntitySet="ENTITE" />
+      <End Role="MAGASIN" EntitySet="MAGASIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PAGE_CATALOGUE" Association="Self.FK_PAGE_CATALOGUE">
+      <End Role="CATALOGUE" EntitySet="CATALOGUE" />
+      <End Role="PAGE" EntitySet="PAGE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUIT_ATTRIBUT_ATTRIBUT" Association="Self.FK_PRODUIT_ATTRIBUT_ATTRIBUT">
+      <End Role="ATTRIBUT" EntitySet="ATTRIBUT" />
+      <End Role="PRODUIT_ATTRIBUT" EntitySet="PRODUIT_ATTRIBUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUIT_ATTRIBUT_PRODUIT" Association="Self.FK_PRODUIT_ATTRIBUT_PRODUIT">
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+      <End Role="PRODUIT_ATTRIBUT" EntitySet="PRODUIT_ATTRIBUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUIT_CATALOGUE" Association="Self.FK_PRODUIT_CATALOGUE">
+      <End Role="CATEGORIE" EntitySet="CATEGORIE" />
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZONE_PAGE" Association="Self.FK_ZONE_PAGE">
+      <End Role="PAGE" EntitySet="PAGE" />
+      <End Role="ZONE" EntitySet="ZONE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ZONE_PRODUIT" Association="Self.FK_ZONE_PRODUIT">
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+      <End Role="ZONE" EntitySet="ZONE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
